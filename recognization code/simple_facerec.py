@@ -66,17 +66,17 @@ class SimpleFacerec:
                 name = self.known_face_names[best_match_index]
             face_names.append(name)
             # face recognized means suspect found so notification sent
-            from plyer import notification
-            import time
-
-            while True:
-                time.sleep(2)
-                notification.notify(
-                    title='Alert From Police HQ',
-                    message='Suspected person found in your area\nplease take appropriate action',
-                    app_icon="Notif.ico",
-                    timeout=8,
-                )
+            # from plyer import notification
+            # import time
+            #
+            # while True:
+            #     time.sleep(2)
+            #     notification.notify(
+            #         title='Alert From Police HQ',
+            #         message='Suspected person found in your area\nplease take appropriate action',
+            #         app_icon="Notif.ico",
+            #         timeout=8,
+            #     )
 
         # Convert to numpy array to adjust coordinates with frame resizing quickly
         face_locations = np.array(face_locations)
